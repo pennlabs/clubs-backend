@@ -230,3 +230,7 @@ class MassInviteAPIView(APIView):
         return Response({
             'detail': 'Sent invite(s) to {} email(s)!'.format(len(emails))
         })
+
+
+
+class AdvisorViewSet(viewsets.ModelViewSet):

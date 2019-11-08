@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from django.template.defaultfilters import slugify
 from rest_framework import serializers, validators
 
-from clubs.models import Asset, Badge, Club, Event, Favorite, Membership, MembershipInvite, Tag
+from clubs.models import Advisor, Asset, Badge, Club, Event, Favorite, Membership, MembershipInvite, Tag
 from clubs.utils import clean
 
 
@@ -496,3 +496,7 @@ class AssetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Asset
         fields = ('id', 'file_url', 'file', 'creator')
+
+
+class AdvisorSerializer(serializers.ModelSerializer):
+
